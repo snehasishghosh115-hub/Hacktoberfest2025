@@ -149,6 +149,13 @@ Add your profile to the contributors section by adding your details in the forma
         <sub><b>Deepak Stark</b></sub>
       </a>
     </td>
+    <td align="center">
+      <a href="https://github.com/Yash6012">
+        <img src="https://github.com/Yash6012/yash6012/blob/main/Github.jpg" width="100px;" alt="Deepak Stark"/>
+        <br />
+        <sub><b>Yash Singh</b></sub>
+      </a>
+    </td>
     <!-- Add your profile here following the same format -->
     <!-- Example:
     <td align="center">
