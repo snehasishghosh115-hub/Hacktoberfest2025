@@ -1,0 +1,12 @@
+N = int(input())
+temp = N
+power = 1
+while temp >= 10:
+    temp //= 10
+    power *= 10
+first = temp
+remaining = N % power
+second = remaining // (power // 10)
+rest = N % (power // 10)
+result = second * power + first * (power // 10) + rest
+print(result)
