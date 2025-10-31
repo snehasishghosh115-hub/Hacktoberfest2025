@@ -1,0 +1,61 @@
+# lista_de_compras_debora.py
+# Script simples de lista de compras em Python.
+# Ideal para iniciantes participando do Hacktoberfest 2025.
+# O usuário pode adicionar, visualizar e remover itens da lista.
+
+def exibir_menu():
+    """Exibe as opções do menu principal."""
+    print("\n=== Lista de Compras ===")
+    print("1. Adicionar item")
+    print("2. Remover item")
+    print("3. Ver lista completa")
+    print("4. Sair")
+
+def adicionar_item(lista):
+    """Adiciona um item à lista de compras."""
+    item = input("Digite o nome do item para adicionar: ").strip()
+    if item:
+        lista.append(item)
+        print(f"✅ '{item}' foi adicionado à lista.")
+    else:
+        print("⚠️ Nenhum item digitado.")
+
+def remover_item(lista):
+    """Remove um item da lista de compras."""
+    item = input("Digite o nome do item para remover: ").strip()
+    if item in lista:
+        lista.remove(item)
+        print(f"🗑️ '{item}' foi removido da lista.")
+    else:
+        print(f"⚠️ O item '{item}' não está na lista.")
+
+def mostrar_lista(lista):
+    """Exibe todos os itens da lista de compras."""
+    print("\n=== Sua Lista de Compras ===")
+    if lista:
+        for i, item in enumerate(lista, start=1):
+            print(f"{i}. {item}")
+    else:
+        print("🛒 Sua lista está vazia.")
+
+def main():
+    """Função principal que gerencia o menu."""
+    lista = []
+    while True:
+        exibir_menu()
+        opcao = input("Escolha uma opção (1-4): ")
+
+        if opcao == "1":
+            adicionar_item(lista)
+        elif opcao == "2":
+            remover_item(lista)
+        elif opcao == "3":
+            mostrar_lista(lista)
+        elif opcao == "4":
+            print("👋 Saindo da lista de compras. Até logo!")
+            break
+        else:
+            print("❌ Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
